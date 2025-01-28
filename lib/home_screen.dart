@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          color: Colors.red,
+          color: Color(0xff3B5998),
           width: double.infinity,
           height: double.infinity,
           padding: const EdgeInsets.all(10),
@@ -17,19 +17,40 @@ class HomeScreen extends StatelessWidget {
               ClipPath(
                 clipper: ShapeChange2(),
                 child: Container(
-                  height: 400,
-                  color: Colors.greenAccent,
+                  height: 450,
+                  width: double.infinity,
+                  color: Colors.white,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        "assets/login.png",
+                      ),
+                      const Text(
+                        "Welcome",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      const Text(
+                        "By signing in you are agreeing our",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      const Text(
+                        "Term and privacy policy",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Positioned(
-                top: 300,
+                top: 350,
                 left: 5,
                 right: 5,
                 child: ClipPath(
                   clipper: ShapeChange(),
                   child: Container(
                     height: 400,
-                    color: Colors.yellow,
+                    color: Colors.white,
                   ),
                 ),
               ),
